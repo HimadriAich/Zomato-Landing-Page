@@ -1,0 +1,11 @@
+/*the below three lines of code are compulsory for every project we make*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.hero__section{
+    background: url(./images/heroSectionBackground.png);
+}
