@@ -7,5 +7,56 @@
 }
 
 .hero__section{
-    background: url(./images/heroSectionBackground.png);
+    background: url(./images/heroSectionBackground.png);   /*used to add background image*/
+    background-size: cover; /*used to cover the whole screen with the image*/
+    background-position: center;    /*used to position the image at the center*/
+    color: white;
+    min-height: 60vh;
+}
+
+.navbar{
+    display: flex; 
+    align-items: center;  /*used to align items vertically in the center*/
+    justify-content: space-between;     /*used to align items horizontally with space between them*/
+    height: 65px;
+    padding: 16px 48px;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;  /*used to remove the underline from the links*/
+}
+
+
+.navbar__menu_container{
+    display: flex;
+    gap: 18px;   /*used to add space between the items, we can also write padding-right: 18px;  */
+}
+
+.navbar__menu_container .user__icon{  /*used to style the user icon*/ 
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center; /*used to align items vertically in the center*/
+    justify-content: center; /*used to align items horizontally in the center*/
+    border-radius: 100%; /*used to make the icon circular*/
+    border: 1px solid white; /*used to add border to the icon*/
+    display: none; /*used to hide the icon, when screen size is big (like in laptop screen or pc screen)*/
+}
+
+
+/*Screen size is from 0-600 i.e. smaller screen(mobile)*/
+@media only screen and (max-widh: 60px){ /*used to make the website responsive, max-width is used to set the maximum width of the screen*/
+
+    .navbar__menu_container .user__icon{
+        display: flex; /*used to show the icon*/
+    }
+
+    .link{
+        display: none; /*used to hide the anchor tags, when screen size becomes small(like in mobile)*/
+    }
+
+    .hero__section{
+        min-height: 80vh; /*used to set the minimum height of the hero section to 80% of the viewport height*/  
+    }
 }
