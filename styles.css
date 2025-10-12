@@ -45,8 +45,67 @@
 }
 
 
+
+/*Day-20 hero section input*/
+
+.hero__section_container{
+    display: flex;
+    flex-direction: column; /*used to align items vertically*/
+    align-items: center; /*used to align items horizontally in the center*/
+    justify-content: center; /*used to align items vertically in the center*/
+    text-align: center; /*used to align text in the center*/
+    gap: 20px; /*used to add space between the items*/
+    height: calc(60vh - 65px); /*used to set the height of the content to the height of the viewport minus the height of the navbar*/
+}
+
+.hero__section_logo{
+    width: 200px;
+    height: auto; /*used to maintain the aspect ratio of the image*/
+}
+
+
+.hero__section_title{
+    text-align: center; /*used to align text in the center*/
+    font-size: 30px; /*used to set the font size of the title*/
+    font-weight: 380; /*used to set the boldness of the title,  no units with font-weight*/
+}
+
+
+.hero__section_input_container{
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 10px;
+    width: 50%; /*used to set the width of the input container to 50% of the parent container*/
+    border-radius: 10px; /*used to make the corners of the input container rounded*/
+}
+
+.input_container_location,
+.input_container_search{
+    padding: 5px;
+    border: none; /*used to remove the border of the input field*/
+    outline: none; /*used to remove the outline of the input field when it is focused*/
+}
+
+.input_container_location{
+    width: 35%; /*used to set the width of the location input field to 35% of the parent container*/
+    border-right: 2px solid #e0e0e0; /*used to add a border to the right of the input field*/
+}
+
+.input_container_search{
+    width: 65%; /*used to set the width of the search input field to 65% of the parent container*/
+}
+
+
+
+
+
+
+
 /*Screen size is from 0-600 i.e. smaller screen(mobile)*/
-@media only screen and (max-widh: 60px){ /*used to make the website responsive, max-width is used to set the maximum width of the screen*/
+@media only screen and (max-widh: 600px){ /*used to make the website responsive, max-width is used to set the maximum width of the screen*/
 
     .navbar__menu_container .user__icon{
         display: flex; /*used to show the icon*/
@@ -59,4 +118,89 @@
     .hero__section{
         min-height: 80vh; /*used to set the minimum height of the hero section to 80% of the viewport height*/  
     }
+
+    .hero__section_container{
+        flex-direction: column; /*used to align items vertically*/
+        background-color: transparent; /*used to make the background color of the container transparent*/
+        width: 100%; /*used to set the width of the container to 100% of the parent container*/
+
+    }
+
+    .input_container_location,
+    .input_container_search{
+
+        padding: 18px;
+        border-radius: 10px;
+        width: 98%; /*used to set the width of the input fields to 98% of the parent container*/
+  
+    }
+
+    .hero__section_container{
+        height: calc(80vh - 40px); /*used to set the height of the content to the height of the viewport minus the height of the navbar*/
+
+    }
+
+    .hero__section_title{
+        font-size: 18px;
+        width: 95%; /*used to set the width of the title to 95% of the parent container*/
+
+    }
+
+}
+  
+
+
+/*Out of media queries*/
+
+.container{
+    margin: 3rem auto; /*used to center the container horizontally*/
+    width: 90%;
+}
+
+.we__offer{
+    display: flex;
+    flex-wrap: wrap; /*used to wrap the items to the next line when they exceed the width of the container- so th content comes one below the other on shrinking screen size*/
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.we__offer_card{
+    border-radius: 10px;
+    background-color: aqua;
+    overflow: hidden; /*used to hide the overflow of the image*/
+    border: 1px solid #e0e0e0;
+    transition: all 1s ease-in; /*used to add transition effect to the card when hovered*/
+    margin-right: 12px; /*used to add space between the cards*/
+}
+    
+.we__offer_card:hover{
+    transform: scale(1.1); /*used to scale the card when hovered*/
+
+}
+
+
+.we__offer_card img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover; /*used to cover the entire image without distorting it*/
+    object-position: center; /*used to position the image at the center*/
+}
+
+
+.we__offer_content{
+    padding: 10px;
+}
+
+.we__offer_content h2{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.we__offer_content p{
+    font-size: 12.5px;
+    color: grey;
+    margin-top: 5px;
+    line-height: 1.5; /*used to set the line height of the paragraph*/
 }
