@@ -168,7 +168,7 @@
 
 .we__offer_card{
     border-radius: 10px;
-    background-color: aqua;
+    /* background-color: aqua; */
     overflow: hidden; /*used to hide the overflow of the image*/
     border: 1px solid #e0e0e0;
     transition: all 1s ease-in; /*used to add transition effect to the card when hovered*/
@@ -204,3 +204,244 @@
     margin-top: 5px;
     line-height: 1.5; /*used to set the line height of the paragraph*/
 }
+
+
+.collections h1{     /*second class name of the section tag */
+
+    font-weight: 600;
+}
+
+.collections sub__heading_container{
+
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*used to align items horizontally with space between them*/
+    flex-wrap: wrap; /*used to wrap the items to the next line when they exceed the width of the container*/
+    gap: 1rem; /*used to add space between the items*/
+}
+
+
+.sub__heading_container span:nth-child(2){  /*used to select the second span element inside the sub__heading_container class*/
+    
+    color: #ff7e8b;
+    font-size: 13px;
+    cursor: pointer; /*used to change the cursor to pointer when hovered*/
+    
+}
+
+.collections_card_container{
+    display: flex;
+    flex-wrap: wrap; /*used to wrap the items to the next line when they exceed the width of the container*/
+    gap: 0.5rem; 
+    align-items: center;        
+    justify-content: center;    
+    margin-top: 1.25rem; /*used to add space between the heading and the cards*/
+}
+
+.collections_card_container .card{  /*used to style the card class inside the collections_card_container class*/
+    
+    height: 300px;
+    min-width: 240px; /*used to set the minimum width of the card*/
+    background-size: cover; /*used to cover the entire card without distorting it*/
+    background-position: 10px; /*used to position the image at 10px from the left*/
+    border-radius: 10px; /*used to make the corners of the card rounded*/
+    position: relative; /*used to position the overlay text at the bottom of the card*/
+
+}
+
+
+.card1{
+
+    background-image: url(/images/collection1.jpg);
+}
+
+.card2{
+    background-image: url(/images/collection2.jpg);
+}
+
+.card3{
+    background-image: url(/images/collection3.jpg);
+}
+
+.card4{
+    background-image: url(/images/collection4.jpg);
+}
+
+
+/*rgba-> red,green, blue(0-255), opacity(b/w 0 to 1)*/
+.overlay{
+
+    width: 100%;
+    height: 100%;
+    position: absolute; /*used to position the overlay text at the bottom of the card*/
+    top: 0; /*used to position the overlay text at the top of the card */
+    left: 0; /*used to position the overlay text at the left of the card*/
+    border-radius: 10px; /*used to make the corners of the overlay rounded*/
+    background-image: linear-gradient(
+        top,  
+        rgba(225, 0, 0, 1) 0%,
+        rgba(225, 0, 2, 1) 50%,
+        rgba(225, 0, 0, 1) 85%
+    );
+    z-index: 5; /*used to position the overlay text above the image*/
+}
+
+
+.collections_card_container .card .content {  /*used to style the content class inside the card class inside the collections_card_container class*/
+    
+    position: absolute; /*used to position the content at the bottom of the card*/
+    bottom: 0; /*used to position the content at the bottom of the card*/
+    left: 0; /*used to position the content at the left of the card*/
+    padding: 12px 16px; /*used to add padding to the content*/
+    color: white;
+    font-size: 0.9rem;
+    z-index: 6; /*used to position the content above the overlay*/
+}
+
+
+.content h4{
+    font-weight: 400;
+    letter-spacing: 0.5px;  /*used to add space between the letters*/
+
+}
+
+
+
+
+
+.get__the_app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255,251,247);
+    width: 100%;
+    padding: 3rem 6rem;
+}
+
+
+.get__the_app .semiContainer{
+    width: 60%; /*used to set the width of the container to 60% of the parent container*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /*used to wrap the items to the next line when they exceed the width of the container*/  
+    gap: 1.5rem;
+}
+
+
+
+.get__the_app .semiContainer .left{ 
+   flex: 2; /*used to set the flex-grow property of the left container to 2*/
+}
+
+
+.get__the_app .semiContainer .left img{ /*used to style the image inside the left container*/
+    width: 100%;
+    object-fit: cover; /*used to cover the entire image without distorting it*/
+    object-position: center; /*used to position the image at the center*/
+}
+
+.get__the_app .semiContainer .right{   /*used to style the right container*/
+    flex: 3; /*used to set the flex-grow property of the right container to 3*/
+    height: 100%;  
+    display: flex;
+    flex-direction: column; /*used to align items vertically*/
+    gap: 1rem; /*used to add space between the items*/
+}
+
+
+.right h1{
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.right p{
+    font-size: 0.8rem;
+}
+
+
+.right .radio__button_container{  /*used to style the radio button container*/
+    display: flex; 
+    align-items: center;
+    gap: 1rem; /*used to add space between the items*/
+}
+
+
+.right .radio__button_container div{  /*used to style the div inside the radio button container*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.right .radio__button_container div input{   /*used to style the input field inside the div*/
+    height: 15px;
+    width: 15px;
+    accent-color: rgb(239, 79, 95);  /*used to change the color of the radio button*/
+}
+
+.right .input_container{    /*used to style the input container*/
+    display: flex;
+    gap: 0.5rem;
+}
+
+
+.input_container{
+    flex: wrap; /*used to wrap the items to the next line when they exceed the width of the container*/
+}
+
+
+
+.input_container button,    /*used to style both button and input field*/
+.input_container input{
+    
+    padding: 10px 12px; /*used to add padding to the button and input field*/
+}
+
+
+.input_container input{ 
+   
+    flex: auto; /*used to make the input field take up the remaining space*/
+    border: 1.5px solid gray;
+    outline: none; /*used to remove the outline of the input field when it is focused*/
+    border-radius: 5px; /*used to make the corners of the input field rounded*/
+
+}
+
+.input_container button{
+    
+    border: none; /*used to remove the border of the button*/
+    background-color: rgb(239, 79, 95); /*used to set the background color of the button*/
+    color: white; /*used to set the text color of the button*/
+    border-radius: 5px; /*used to make the corners of the button rounded*/
+    cursor: pointer; /*used to change the cursor to pointer when hovered*/
+}
+
+
+.right download__app_container{  /*used to style the download app container inside the right*/
+    display: flex;
+    flex-direction: column; /*used to align items vertically*/
+    gap: 0.7rem; /*used to add space between the items*/
+}
+
+.right .download__app_container h5{  /*used to style the h5 inside the download app container*/
+    font-weight: 400;
+    color: gray;
+}
+
+.right .download__app_container div{  /*used to style the div inside the download app container*/
+    display: flex; /*used to align items horizontally*/ 
+    gap: 1rem; /*used to add space between the items*/
+}
+
+
+.right .download__app_container div img{  /*used to style the image inside the div*/
+    width: 35%;  /*used to set the width of the image to 35% of the parent container*/
+    
+}
+
+
+
+/*Media Queries For Download App*/
