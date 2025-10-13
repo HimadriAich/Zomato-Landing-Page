@@ -279,7 +279,7 @@
     left: 0; /*used to position the overlay text at the left of the card*/
     border-radius: 10px; /*used to make the corners of the overlay rounded*/
     background-image: linear-gradient(
-        top,  
+          
         rgba(225, 0, 0, 1) 0%,
         rgba(225, 0, 2, 1) 50%,
         rgba(225, 0, 0, 1) 85%
@@ -389,7 +389,7 @@
 
 
 .input_container{
-    flex: wrap; /*used to wrap the items to the next line when they exceed the width of the container*/
+    flex-wrap: wrap; /*used to wrap the items to the next line when they exceed the width of the container*/
 }
 
 
