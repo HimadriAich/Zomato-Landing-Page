@@ -314,6 +314,9 @@
     padding: 3rem 6rem;
 }
 
+.app_logos img{
+    cursor: pointer;
+}
 
 .get__the_app .semiContainer{
     width: 60%; /*used to set the width of the container to 60% of the parent container*/
@@ -440,3 +443,203 @@
 
 
 /*Media Queries For Download App*/
+
+@media only screen and (max-width: 1300px){  /*used to make the website responsive, max-width is used to set the maximum width of the screen*/
+/*for laptop and pc screen*/
+    .get__the_app .semiContainer .left,
+    .get__the_app .semiContainer .right{
+        flex: 1; /*used to set the flex-grow property of both left and right container to 1*/
+    }
+
+
+    .get__the_app .semiContainer{
+        width: 80%; /*used to set the width of the container to 80% of the parent container*/
+    }
+
+        
+} 
+
+
+
+@media only screen and (max-width: 900px){  /*used to make the website responsive, max-width is used to set the maximum width of the screen*/
+/*for mobile screen*/
+
+    .get__the_app{
+        padding: 2rem 0; /*used to add padding to the get the app section*/
+    }
+
+    .get__the_app .semiContainer{
+        width: 95%; /*used to set the width of the container to 100% of the parent container*/
+        flex-direction: column; /*used to align items vertically*/
+    }
+
+
+}
+
+/*EXPLORE SECTION*/
+.explore{
+    display: flex;
+    flex-direction: column; /*used to align items vertically*/
+    align-items: center; /*used to align items horizontally in the center*/
+     background-color: rgb(255,251,247);
+     width: 100%;
+    justify-content: center; /*used to align items vertically in the center*/
+}
+
+.explore h3{
+    font-weight: 500;
+    margin-bottom: 1rem; /*used to add space between the heading and the options*/
+}
+
+.explore_options form{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    width: auto
+    
+}
+/*FOOTER SECTION*/
+
+.footer{
+    width: 100%;
+
+}
+
+.footer_section1{
+
+    display: flex;
+    flex-wrap: wrap; /*used to wrap the items to the next line when they exceed the width of the container*/
+    align-items: center;
+    justify-content: space-between;
+    width: 80%; /*used to set the width of the container to 80% of the parent container*/
+    margin: auto; /*used to center the container horizontally*/ 
+}
+
+
+.footer_section1 img{
+    width: 130px;
+}
+
+.section1__buttonContainer{
+    display: flex;
+    gap: 1rem; /*used to add space between the items*/
+}
+
+.section1__buttonContainer button{
+    padding: 5px;
+    width: 90px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: transparent; /*used to make the background color of the button transparent*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer; /*used to change the cursor to pointer when hovered*/
+}
+
+
+/*USING GRID*/
+
+.navigation_container{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */ /*used to create 5 equal columns*/
+    
+    grid-template-columns: repeat(5, 1fr);  /*used to create 5 equal columns*/
+
+    width: 80%; /*used to set the width of the container to 80% of the parent container*/
+    margin: auto;
+    gap: 1rem; /*used to add space between the items*/
+    padding: 3rem 0; /*used to add padding to the container*/
+
+}
+
+.link__container{
+    display: flex;
+    flex-direction: column; /*used to align items vertically*/
+    gap: 5px; /*used to add space between the items*/
+
+}
+
+.link__container h5{
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 5px;
+    letter-spacing: 0.8px; /*used to add space between the letters*/
+}
+
+
+.footer__link{
+    text-decoration: none;  /*used to remove the underline from the links*/
+    color: gray;
+    font-size: 12.5px;
+    font-weight: 300;
+}
+
+
+.footer__link:hover{
+    color: black; /*used to change the color of the link when hovered*/
+    text-decoration: underline; /*used to add underline to the link when hovered*/
+}
+
+.section__links_container button{
+    
+    background-color: black;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%; /*used to make the button circular*/
+    color: white; /*used to change the color of the icon*/
+    cursor: pointer; /*used to change the cursor to pointer when hovered*/
+}
+
+
+.section__links_container button i{
+   /*  color: white;  *//*used to change the color of the icon*/
+    font-size: 13px;
+    display: flex;
+    justify-content: center; /*used to align items horizontally in the center*/
+    align-items: center;  /*used to align items vertically in the center*/
+}
+
+
+.footer__section_logos{
+    width: 100%;
+}
+
+
+/*DISCLAIMER*/
+
+.disclaimer{
+    width: 95%;
+    color: gray;
+    margin: auto; 
+    border-top: 1px solid gray;
+    padding-top: 1.5rem;
+
+}
+
+
+/*Media queries for grid*/
+
+@media only screen and (max-width: 900px){ /*used to make the website responsive, max-width is used to set the maximum width of the screen*/
+
+    .navigation_container{
+        grid-template-columns: repeat(3, 1fr); /*used to create 3 equal columns-repeat 3 columns of one fragment when screen size is 0-900px*/
+    }
+}
+    
+
+@media only screen and (max-width: 500px){ /*used to make the website responsive, max-width is used to set the maximum width of the screen*/
+
+    .navigation_container{
+        grid-template-columns: repeat(2, 1fr); /*used to create 2 equal columns-repeat 2 columns of one fragment when screen size is 0-500px*/
+    }
+}
+
+@media only screen and (max-width: 320px){ /*used to make the website responsive, max-width is used to set the maximum width of the screen*/
+
+    .navigation_container{
+        grid-template-columns: repeat(1, 1fr); /*used to create 1 equal columns-repeat  columns of one fragment when screen size is 0-500px*/
+    }
+}
