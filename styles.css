@@ -1,0 +1,645 @@
+/*the below three lines of code are compulsory for every project we make*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.hero__section{
+    background: url(./images/heroSectionBackground.png);   /*used to add background image*/
+    background-size: cover; /*used to cover the whole screen with the image*/
+    background-position: center;    /*used to position the image at the center*/
+    color: white;
+    min-height: 60vh;
+}
+
+.navbar{
+    display: flex; 
+    align-items: center;  /*used to align items vertically in the center*/
+    justify-content: space-between;     /*used to align items horizontally with space between them*/
+    height: 65px;
+    padding: 16px 48px;
+}
+
+.navbar a{
+    color: white;
+    text-decoration: none;  /*used to remove the underline from the links*/
+}
+
+
+.navbar__menu_container{
+    display: flex;
+    gap: 18px;   /*used to add space between the items, we can also write padding-right: 18px;  */
+}
+
+.navbar__menu_container .user__icon{  /*used to style the user icon*/ 
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center; /*used to align items vertically in the center*/
+    justify-content: center; /*used to align items horizontally in the center*/
+    border-radius: 100%; /*used to make the icon circular*/
+    border: 1px solid white; /*used to add border to the icon*/
+    display: none; /*used to hide the icon, when screen size is big (like in laptop screen or pc screen)*/
+}
+
+
+
+/*Day-20 hero section input*/
+
+.hero__section_container{
+    display: flex;
+    flex-direction: column; /*used to align items vertically*/
+    align-items: center; /*used to align items horizontally in the center*/
+    justify-content: center; /*used to align items vertically in the center*/
+    text-align: center; /*used to align text in the center*/
+    gap: 20px; /*used to add space between the items*/
+    height: calc(60vh - 65px); /*used to set the height of the content to the height of the viewport minus the height of the navbar*/
+}
+
+.hero__section_logo{
+    width: 200px;
+    height: auto; /*used to maintain the aspect ratio of the image*/
+}
+
+
+.hero__section_title{
+    text-align: center; /*used to align text in the center*/
+    font-size: 30px; /*used to set the font size of the title*/
+    font-weight: 380; /*used to set the boldness of the title,  no units with font-weight*/
+}
+
+
+.hero__section_input_container{
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 10px;
+    width: 50%; /*used to set the width of the input container to 50% of the parent container*/
+    border-radius: 10px; /*used to make the corners of the input container rounded*/
+}
+
+.input_container_location,
+.input_container_search{
+    padding: 5px;
+    border: none; /*used to remove the border of the input field*/
+    outline: none; /*used to remove the outline of the input field when it is focused*/
+}
+
+.input_container_location{
+    width: 35%; /*used to set the width of the location input field to 35% of the parent container*/
+    border-right: 2px solid #e0e0e0; /*used to add a border to the right of the input field*/
+}
+
+.input_container_search{
+    width: 65%; /*used to set the width of the search input field to 65% of the parent container*/
+}
+
+
+
+
+
+
+
+/*Screen size is from 0-600 i.e. smaller screen(mobile)*/
+@media only screen and (max-widh: 600px){ /*used to make the website responsive, max-width is used to set the maximum width of the screen*/
+
+    .navbar__menu_container .user__icon{
+        display: flex; /*used to show the icon*/
+    }
+
+    .link{
+        display: none; /*used to hide the anchor tags, when screen size becomes small(like in mobile)*/
+    }
+
+    .hero__section{
+        min-height: 80vh; /*used to set the minimum height of the hero section to 80% of the viewport height*/  
+    }
+
+    .hero__section_container{
+        flex-direction: column; /*used to align items vertically*/
+        background-color: transparent; /*used to make the background color of the container transparent*/
+        width: 100%; /*used to set the width of the container to 100% of the parent container*/
+
+    }
+
+    .input_container_location,
+    .input_container_search{
+
+        padding: 18px;
+        border-radius: 10px;
+        width: 98%; /*used to set the width of the input fields to 98% of the parent container*/
+  
+    }
+
+    .hero__section_container{
+        height: calc(80vh - 40px); /*used to set the height of the content to the height of the viewport minus the height of the navbar*/
+
+    }
+
+    .hero__section_title{
+        font-size: 18px;
+        width: 95%; /*used to set the width of the title to 95% of the parent container*/
+
+    }
+
+}
+  
+
+
+/*Out of media queries*/
+
+.container{
+    margin: 3rem auto; /*used to center the container horizontally*/
+    width: 90%;
+}
+
+.we__offer{
+    display: flex;
+    flex-wrap: wrap; /*used to wrap the items to the next line when they exceed the width of the container- so th content comes one below the other on shrinking screen size*/
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.we__offer_card{
+    border-radius: 10px;
+    /* background-color: aqua; */
+    overflow: hidden; /*used to hide the overflow of the image*/
+    border: 1px solid #e0e0e0;
+    transition: all 1s ease; /*used to add transition effect to the card*/
+    margin-right: 12px; /*used to add space between the cards*/
+}
+    
+.we__offer_card:hover{
+    transform: scale(1.1); /*used to scale the card when hovered*/
+
+}
+
+
+.we__offer_card img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover; /*used to cover the entire image without distorting it*/
+    object-position: center; /*used to position the image at the center*/
+}
+
+
+.we__offer_content{
+    padding: 10px;
+}
+
+.we__offer_content h2{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.we__offer_content p{
+    font-size: 12.5px;
+}
+
+
+.collections h1{     /*second class name of the section tag */
+
+    font-weight: 600;
+}
+
+.collections sub__heading_container{
+
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*used to align items horizontally with space between them*/
+    flex-wrap: wrap; /*used to wrap the items to the next line when they exceed the width of the container*/
+    gap: 1rem; /*used to add space between the items*/
+}
+
+
+.sub__heading_container span:nth-child(2){  /*used to select the second span element inside the sub__heading_container class*/
+    
+    color: #ff7e8b;
+    font-size: 13px;
+    cursor: pointer; /*used to change the cursor to pointer when hovered*/
+    
+}
+
+.collections_card_container{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    flex-wrap: wrap; /*used to wrap the items to the next line when they exceed the width of the container*/
+    gap: 0.5rem; 
+    margin-top: 1.25rem; /*used to add space between the heading and the cards*/
+}
+
+.collections_card_container .card{  /*used to style the card class inside the collections_card_container class*/
+    
+    height: 300px;
+    min-width: 240px; /*used to set the minimum width of the card*/
+    background-size: cover; /*used to cover the entire card without distorting it*/
+    background-position: center; /*used to position the image at the center*/
+    border-radius: 10px; /*used to make the corners of the card rounded*/
+    position: relative; /*used to position the overlay text at the bottom of the card*/
+
+}
+
+
+.card1{
+
+    background-image: url(/images/collection1.jpg);
+}
+
+.card2{
+    background-image: url(/images/collection2.jpg);
+}
+
+.card3{
+    background-image: url(/images/collection3.jpg);
+}
+
+.card4{
+    background-image: url(/images/collection4.jpg);
+}
+
+
+/*rgba-> red,green, blue(0-255), opacity(b/w 0 to 1)*/
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute; /*used to position the overlay text at the bottom of the card*/
+    top: 0; /*used to position the overlay text at the top of the card */
+    left: 0; /*used to position the overlay text at the left of the card*/
+    border-radius: 10px; /*used to make the corners of the overlay rounded*/
+    background-image: linear-gradient(
+          
+        rgba(225, 0, 0, 1) 0%,
+        rgba(225, 0, 2, 1) 50%,
+        rgba(225, 0, 0, 1) 85%,
+    );
+    z-index: 5; /*used to position the overlay text above the image*/
+}
+
+
+.collections_card_container .card .content{  /*used to style the content class inside the card class inside the collections_card_container class*/
+    
+    position: absolute; /*used to position the content at the bottom of the card*/
+    bottom: 0; /*used to position the content at the bottom of the card*/
+    left: 0; /*used to position the content at the left of the card*/
+    color: white;
+    padding: 12px 16px; /*used to add padding to the content*/
+    font-size: 0.9rem;
+    z-index: 6; /*used to position the content above the overlay*/
+}
+
+
+.content h4{
+    font-weight: 400;
+    letter-spacing: 0.5px;  /*used to add space between the letters*/
+}
+
+
+
+
+
+.get__the_app{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255,251,247);
+    width: 100%;
+    padding: 3rem 6rem;
+}
+
+.app_logos img{
+    cursor: pointer;
+}
+
+.get__the_app .semiContainer{
+    width: 60%; /*used to set the width of the container to 60% of the parent container*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /*used to wrap the items to the next line when they exceed the width of the container*/  
+    gap: 1.5rem;
+}
+
+
+
+.get__the_app .semiContainer .left{ 
+   flex: 2; /*used to set the flex-grow property of the left container to 2*/
+}
+
+
+.get__the_app .semiContainer .left img{ /*used to style the image inside the left container*/
+    width: 100%;
+    object-fit: cover; /*used to cover the entire image without distorting it*/
+    object-position: center; /*used to position the image at the center*/
+}
+
+.get__the_app .semiContainer .right{   /*used to style the right container*/
+    flex: 3; /*used to set the flex-grow property of the right container to 3*/
+    height: 100%;  
+    display: flex;
+    flex-direction: column; /*used to align items vertically*/
+    gap: 1rem; /*used to add space between the items*/
+}
+
+
+.right h1{
+    font-weight: 400;
+    font-size: 2rem;
+}
+
+.right p{
+    font-size: 0.8rem;
+}
+
+
+.right .radio__button_container{  /*used to style the radio button container*/
+    display: flex; 
+    align-items: center;
+    gap: 1rem; /*used to add space between the items*/
+}
+
+
+.right .radio__button_container div{  /*used to style the div inside the radio button container*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.right .radio__button_container div input{   /*used to style the input field inside the div*/
+    height: 15px;
+    width: 15px;
+    accent-color: rgb(239, 79, 95);  /*used to change the color of the radio button*/
+}
+
+.right .input_container{    /*used to style the input container*/
+    display: flex;
+    gap: 0.5rem;
+}
+
+
+.input_container{
+    flex-wrap: wrap; /*used to wrap the items to the next line when they exceed the width of the container*/
+}
+
+
+
+.input_container button,    /*used to style both button and input field*/
+.input_container input{
+    
+    padding: 10px 12px; /*used to add padding to the button and input field*/
+}
+
+
+.input_container input{ 
+   
+    flex: auto; /*used to make the input field take up the remaining space*/
+    border: 1.5px solid gray;
+    outline: none; /*used to remove the outline of the input field when it is focused*/
+    border-radius: 5px; /*used to make the corners of the input field rounded*/
+
+}
+
+.input_container button{
+    
+    border: none; /*used to remove the border of the button*/
+    background-color: rgb(239, 79, 95); /*used to set the background color of the button*/
+    color: white; /*used to set the text color of the button*/
+    border-radius: 5px; /*used to make the corners of the button rounded*/
+    cursor: pointer; /*used to change the cursor to pointer when hovered*/
+}
+
+
+.right .download__app_container{  /*used to style the download app container inside the right*/
+    display: flex;
+    flex-direction: column; /*used to align items vertically*/
+    gap: 0.7rem; /*used to add space between the items*/
+}
+
+.right .download__app_container h5{  /*used to style the h5 inside the download app container*/
+    font-weight: 400;
+    color: gray;
+}
+
+.right .download__app_container div{  /*used to style the div inside the download app container*/
+    display: flex; /*used to align items horizontally*/ 
+    gap: 1rem; /*used to add space between the items*/
+}
+
+
+.right .download__app_container div img{  /*used to style the image inside the div*/
+    width: 35%;  /*used to set the width of the image to 35% of the parent container*/
+    
+}
+
+
+
+/*Media Queries For Download App*/
+
+@media only screen and (max-width: 1300px){  /*used to make the website responsive, max-width is used to set the maximum width of the screen*/
+/*for laptop and pc screen*/
+    .get__the_app .semiContainer .left,
+    .get__the_app .semiContainer .right{
+        flex: 1; /*used to set the flex-grow property of both left and right container to 1*/
+    }
+
+
+    .get__the_app .semiContainer{
+        width: 80%; /*used to set the width of the container to 80% of the parent container*/
+    }
+
+        
+} 
+
+
+
+@media only screen and (max-width: 900px){  /*used to make the website responsive, max-width is used to set the maximum width of the screen*/
+/*for mobile screen*/
+
+    .get__the_app{
+        padding: 2rem 0; /*used to add padding to the get the app section*/
+    }
+
+    .get__the_app .semiContainer{
+        width: 95%; /*used to set the width of the container to 100% of the parent container*/
+        flex-direction: column; /*used to align items vertically*/
+    }
+
+
+}
+
+/*EXPLORE SECTION*/
+.explore{
+    display: flex;
+    flex-direction: column; /*used to align items vertically*/
+    align-items: center; /*used to align items horizontally in the center*/
+     background-color: rgb(255,251,247);
+     width: 100%;
+    justify-content: center; /*used to align items vertically in the center*/
+}
+
+.explore h3{
+    font-weight: 500;
+    margin-bottom: 1rem; /*used to add space between the heading and the options*/
+}
+
+.explore_options form{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    width: auto
+    
+}
+/*FOOTER SECTION*/
+
+.footer{
+    width: 100%;
+
+}
+
+.footer_section1{
+
+    display: flex;
+    flex-wrap: wrap; /*used to wrap the items to the next line when they exceed the width of the container*/
+    align-items: center;
+    justify-content: space-between;
+    width: 80%; /*used to set the width of the container to 80% of the parent container*/
+    margin: auto; /*used to center the container horizontally*/ 
+}
+
+
+.footer_section1 img{
+    width: 130px;
+}
+
+.section1__buttonContainer{
+    display: flex;
+    gap: 1rem; /*used to add space between the items*/
+}
+
+.section1__buttonContainer button{
+    padding: 5px;
+    width: 90px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: transparent; /*used to make the background color of the button transparent*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    cursor: pointer; /*used to change the cursor to pointer when hovered*/
+}
+
+
+/*USING GRID*/
+
+.navigation_container{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */ /*used to create 5 equal columns*/
+    
+    grid-template-columns: repeat(5, 1fr);  /*used to create 5 equal columns*/
+
+    width: 80%; /*used to set the width of the container to 80% of the parent container*/
+    margin: auto;
+    gap: 1rem; /*used to add space between the items*/
+    padding: 3rem 0; /*used to add padding to the container*/
+
+}
+
+.link__container{
+    display: flex;
+    flex-direction: column; /*used to align items vertically*/
+    gap: 5px; /*used to add space between the items*/
+
+}
+
+.link__container h5{
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 5px;
+    letter-spacing: 0.8px; /*used to add space between the letters*/
+}
+
+
+.footer__link{
+    text-decoration: none;  /*used to remove the underline from the links*/
+    color: gray;
+    font-size: 12.5px;
+    font-weight: 300;
+}
+
+
+.footer__link:hover{
+    color: black; /*used to change the color of the link when hovered*/
+    text-decoration: underline; /*used to add underline to the link when hovered*/
+}
+
+.section__links_container button{
+    
+    background-color: black;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%; /*used to make the button circular*/
+    color: white; /*used to change the color of the icon*/
+    cursor: pointer; /*used to change the cursor to pointer when hovered*/
+}
+
+
+.section__links_container button i{
+   /*  color: white;  *//*used to change the color of the icon*/
+    font-size: 13px;
+    display: flex;
+    justify-content: center; /*used to align items horizontally in the center*/
+    align-items: center;  /*used to align items vertically in the center*/
+}
+
+
+.footer__section_logos{
+    width: 100%;
+}
+
+
+/*DISCLAIMER*/
+
+.disclaimer{
+    width: 95%;
+    color: gray;
+    margin: auto; 
+    border-top: 1px solid gray;
+    padding-top: 1.5rem;
+
+}
+
+
+/*Media queries for grid*/
+
+@media only screen and (max-width: 900px){ /*used to make the website responsive, max-width is used to set the maximum width of the screen*/
+
+    .navigation_container{
+        grid-template-columns: repeat(3, 1fr); /*used to create 3 equal columns-repeat 3 columns of one fragment when screen size is 0-900px*/
+    }
+}
+    
+
+@media only screen and (max-width: 500px){ /*used to make the website responsive, max-width is used to set the maximum width of the screen*/
+
+    .navigation_container{
+        grid-template-columns: repeat(2, 1fr); /*used to create 2 equal columns-repeat 2 columns of one fragment when screen size is 0-500px*/
+    }
+}
+
+@media only screen and (max-width: 320px){ /*used to make the website responsive, max-width is used to set the maximum width of the screen*/
+
+    .navigation_container{
+        grid-template-columns: repeat(1, 1fr); /*used to create 1 equal columns-repeat  columns of one fragment when screen size is 0-500px*/
+    }
+}
